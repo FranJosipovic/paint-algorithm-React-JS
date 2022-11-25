@@ -8,11 +8,11 @@ const MATRIX_HEIGHT = 35;
 const PEN = {
   id: 1,
   type: "pen",
-  paint: function (iPos, jPos, someGrid, color, setGrid) {
+  paint: function (x, y, someGrid, color, setGrid) {
     setGrid((prevGrid) => {
       return prevGrid.map((row, i) => {
         return row.map((item, j) => {
-          if (i === iPos && j === jPos) {
+          if (i === x && j === y) {
             return color;
           } else return item;
         });
