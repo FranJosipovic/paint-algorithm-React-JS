@@ -1,7 +1,6 @@
 .row-wrap{
   display: flex;
   flex-direction: row;
-  max-width: 90vw;
 }
 
 .main-screen-wrapper {
@@ -9,7 +8,8 @@
   margin-left: 10px;
   padding: 10px;
   box-shadow: 0px 0px 2px 2px black;
-  max-width: 90vw;
+  width: 80vw;
+  height: 70vh;
 }
 
 .header{
@@ -23,10 +23,9 @@
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-evenly;
   width: 80vw;
-  gap: 2px;
-  padding: 5px;
+  padding: 0px 10px;
   -webkit-box-shadow: inset 0px -4px 7px -4px rgba(0, 0, 0, 0.75);
     -moz-box-shadow: inset 0px -4px 7px -4px rgba(0, 0, 0, 0.75);
     box-shadow: inset 0px -4px 7px -4px rgba(0, 0, 0, 0.75);
@@ -81,7 +80,59 @@
 }
 
 .cell{
-  width: 15px;
-  height: 15px;
-  border: 1px solid gray;
+  width: 10px;
+  height: 10px;
+ /* width: 25px;
+  height: 25px;*/
+  box-sizing: border-box;
+}
+
+.react-switch-checkbox {
+  height: 0;
+  width: 0;
+  visibility: hidden;
+}
+
+.react-switch-label {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+  width: 50px;
+  height: 25px;
+  background: grey;
+  border-radius: 100px;
+  position: relative;
+  /* transition: background-color .1s; */
+}
+
+.react-switch-label .react-switch-button {
+  content: '';
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  width: 21px;
+  height: 21px;
+  border-radius: 100%;
+  transition: 0.3s ease-out;
+  background: #fff;
+  box-shadow: 0 0 2px 0 rgba(10, 10, 10, 0.29);
+}
+
+.react-switch-checkbox:checked+.react-switch-label .react-switch-button {
+  left: calc(100% - 2px);
+  transform: translateX(-100%);
+}
+
+.react-switch-label:active .react-switch-button {
+  width: 20px;
+}
+
+.main-screen-options {
+  padding: 10px;
+}
+
+.toggle-grid {
+  display: flex;
+  margin-top: 20px;
 }
